@@ -1,8 +1,6 @@
 with open('inp.txt', 'r') as f:
     l = f.read().split('\n')
 
-points = {'X': 1, 'Y': 2, 'Z': 3}
-
 m1s = ['A', 'B', 'C']
 m2s = ['X', 'Y', 'Z']
 
@@ -18,7 +16,7 @@ def score(m1, end):
     else:
         m2 = m2s[(m1s.index(m1) - 2) % 3]
         s += 6
-    s += points[m2]
+    s += m2s.index(m2) + 1
     return s
 
 l = list(map(lambda moves: moves.split(' '), l))
