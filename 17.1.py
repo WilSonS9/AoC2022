@@ -64,12 +64,8 @@ def visualize(yMax):
 for n in range(2022):
     print(n)
     type = types[n % len(types)]
-    # print(type)
     r = Rock(type, yMax)
     totalUsedCoords, i = r.simulateFall(totalUsedCoords, jetStream, i)
     yMax = max(totalUsedCoords, key=lambda coord: coord[1])[1]
-    # print(totalUsedCoords)
-
-# visualize(yMax)
 
 print(yMax)
